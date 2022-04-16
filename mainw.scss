@@ -1,0 +1,134 @@
+@import   './thisdoldar/thisfile';
+@import './varibol/var';
+$mydir:"top";
+.myDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    background-color: $bgdiv;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    &::before {
+        content: "";
+        @if ($mydir == "top"){
+                    position: absolute;
+                    left: 50%;
+                    top: -40px;
+                    border: transparent solid 20px;
+                    border-bottom-color: rgb(237, 40, 161);
+                    transform: translatex(-50%);
+                    -webkit-transform: translatex(-50%);
+                    -moz-transform: translatex(-50%);
+                    -ms-transform: translatex(-50%);
+                    -o-transform: translatex(-50%);
+        }
+        @else if($mydir=="bottom"){
+                    position: absolute;
+                    left: 50%;
+                    top: -40px;
+                    border: transparent solid 20px;
+                    border-top-color: rgb(237, 40, 161);
+                    transform: translate(-50%, 725%);
+                    -webkit-transform: translate(-50%, 725%);
+                    -moz-transform: translate(-50%, 725%);
+                    -ms-transform: translate(-50%, 725%);
+                    -o-transform: translate(-50%, 725%);
+        }
+        @else if($mydir=="rehit"){
+                    position: absolute;
+                    left: 50%;
+                    top: 100px;
+                    border: transparent solid 20px;
+                    transform: translatey(0);
+                    border-left-color: rgb(237, 40, 161);
+                    transform: translatex(150px);
+                    -webkit-transform: translatex(150px);
+                    -moz-transform: translatex(150px);
+                    -ms-transform: translatex(150px);
+                    -o-transform: translatex(150px);
+        }
+        @else if($mydir=="left"){
+                    position: absolute;
+                    left: 50%;
+                    top: 100px;
+                    border: transparent solid 20px;
+                    transform: translatey(0);
+                    border-right-color: rgb(237, 40, 161);
+                    transform: translatex(-189.1px);
+                    -webkit-transform: translatex(-189.1px);
+                    -moz-transform: translatex(-189.1px);
+                    -ms-transform: translatex(-189.1px);
+                    -o-transform: translatex(-189.1px);
+        }
+}
+}
+
+
+/* bottom
+        position: absolute;
+        left: 50%;
+        top: -40px;
+        border: transparent solid 20px;
+        border-top-color: rgb(237, 40, 161);
+        transform: translate(-50%, 725%);
+        -webkit-transform: translate(-50%, 725%);
+        -moz-transform: translate(-50%, 725%);
+        -ms-transform: translate(-50%, 725%);
+        -o-transform: translate(-50%, 725%);
+*/
+
+/* top
+        position: absolute;
+        left: 50%;
+        top: -40px;
+        border: transparent solid 20px;
+        border-bottom-color: rgb(237, 40, 161);
+        transform: translatex(-50%);
+        -webkit-transform: translatex(-50%);
+        -moz-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+        -o-transform: translatex(-50%);
+*/
+
+/* rehit
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        border: transparent solid 20px;
+        transform: translatey(0);
+        border-left-color: rgb(237, 40, 161);
+        transform: translatex(150px);
+        -webkit-transform: translatex(150px);
+        -moz-transform: translatex(150px);
+        -ms-transform: translatex(150px);
+        -o-transform: translatex(150px);
+*/
+
+/* left
+        position: absolute;
+        left: 50%;
+        top: 100px;
+        border: transparent solid 20px;
+        transform: translatey(0);
+        border-right-color: rgb(237, 40, 161);
+        transform: translatex(-189.1px);
+        -webkit-transform: translatex(-189.1px);
+        -moz-transform: translatex(-189.1px);
+        -ms-transform: translatex(-189.1px);
+        -o-transform: translatex(-189.1px);
+*/
